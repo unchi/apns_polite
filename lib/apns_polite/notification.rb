@@ -51,9 +51,13 @@ module ApnsPolite
 		def close
 			@ssl.close if @ssl
 			@sock.close if @sock
+
+			@ssl = nil
+			@sock = nil
 		end
 		# 通知
 		def push(message)
+			raise "No connected." unless @ssl
 			@ssl.write message.pack
 		end
 
