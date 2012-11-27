@@ -18,12 +18,12 @@ Or install it yourself as:
 
 ## Usage
 
-m = ApnsPolite::Message.new 'device_token', alert: 'message sample', badge: 3
-n = ApnsPolite::Notification.new host: "gateway.push.apple.com", port: 2195, pem: "pem path", password: "pem password"
-
-n.push m
-
-n.close
+ m = ApnsPolite::Message.new 'device_token', alert: 'message sample', badge: 3
+ n = ApnsPolite::Notification.new host: "gateway.push.apple.com", port: 2195, pem: "pem path", password: "pem password"
+ 
+ n.push m
+ 
+ n.close
 
 ## Contributing
 
